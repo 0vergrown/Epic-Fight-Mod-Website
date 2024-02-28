@@ -1,0 +1,22 @@
+.features-section h3 {
+    color: #fff; /* White text color for headings */
+    font-size: 28px; /* Increased font size for headings */
+    margin-bottom: 15px; /* Adds some space below the heading */
+}
+
+.features-section p {
+    color: #ccc; /* Lighter text color for placeholder text */
+    font-size: 18px; /* Increased font size for paragraph text */
+}
+
+.features-section img {
+    border-radius: 50%; /* Round corners for images */
+}
+
+.features-section .feature-image {
+    width: 400px; /* Increased width for a more pronounced rectangular shape */
+    height: 250px; /* Adjusted height to maintain rectangular aspect but not square */
+    border-radius: 15px; /* Maintains the rounded corners */
+    object-fit: cover; /* Ensures images cover the area nicely without stretching */
+    margin-top: 20px; /* Keeps the spacing between the image and the heading text */
+}

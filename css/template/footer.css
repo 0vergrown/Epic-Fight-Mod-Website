@@ -1,0 +1,16 @@
+.social-icon {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-icon:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+}
+
+.social-link {
+    text-decoration: none; /* This removes the underline */
+}
+/* Ensure the link does not have any color that might indicate it's clickable */
+.social-link:link, .social-link:visited, .social-link:hover, .social-link:active {
+    color: inherit; /* This will make the link color the same as the surrounding text color */
+    border: none; /* Ensures no border is applied */
+}

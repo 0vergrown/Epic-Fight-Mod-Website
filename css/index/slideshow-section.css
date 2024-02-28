@@ -1,0 +1,6 @@
+.carousel-item img {
+    height: 500px; /* Adjust based on your preference to control the image's height */
+    width: 100%; /* Ensures the image spans the full width of the carousel */
+    object-fit: cover; /* Cover the box, might crop the image */
+    object-position: center; /* Adjust the position of the image within the container */
+}
