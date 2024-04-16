@@ -1,44 +1,51 @@
-/* Fix for the navbar issue */
 .navbar {
-    z-index: 1030; /* Adjust this value if necessary */
+    background-color: #202020;
 }
 
-.navbar-nav .nav-link, .navbar-brand {
-    color: white !important;
-    font-size: 1rem;
+.navbar-nav {
+    display: flex;
+    align-items: center;
 }
 
-.navbar-nav .nav-link:hover {
-    text-decoration: underline;
-    text-decoration-color: red !important;
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* Keeps the logo on top */
 }
 
-.dropdown-menu {
-    transform-origin: top;
-    animation: slideIn 0.5s ease;
+.navbar-toggler {
+    position: absolute;
+    right: 0.5rem; /* Place toggler at the far right */
+    z-index: 1060;
 }
 
-@keyframes slideIn {
-    from {
-        transform: scaleY(0);
+.btn-download {
+    background-image: linear-gradient(to right, yellow, orange);
+    color: black;
+    border: none;
+    border-radius: 0; /* Makes the button square */
+    padding: 8px 15px; /* Adjust padding to ensure the button appears square */
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        position: static;
+        transform: none;
+        margin: 0 auto; /* Center the logo in the navbar */
     }
-    to {
-        transform: scaleY(1);
+
+    .navbar-toggler {
+        position: absolute;
+        right: 10px;
     }
 }
 
-@media (max-width: 575.98px) { 
-  .navbar-nav .dropdown-menu {
-    position: static;
-    float: none;
-  }
-}
-
-/* New styles for collapsing issue */
-.navbar-collapse.collapsing {
-    display: none !important;
-}
-
-.navbar-collapse.show {
-    display: block !important;
+@media (min-width: 993px) {
+    .navbar-brand {
+        position: static;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
 }
